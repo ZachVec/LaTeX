@@ -1,0 +1,29 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+
+%%%%%%%%%%%%%%%%%%%%%% Packages %%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}            % 避免字体警告
+\usepackage[backref]{hyperref}      % 管理引用
+\usepackage{amsmath}                % 数学符号
+\usepackage{amssymb}                % 更高级的数据符号
+%%%%%%%%%%%%%%%%%%% End Of Package %%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%% 自定义命令 %%%%%%%%%%%%%%%%%%%%%%
+\newcommand\keywords[3]{\textbf{关键词}: #1 \quad #2 \quad #3}
+%%%%%%%%%%%%%%%%%%%% 自定义命令结束 %%%%%%%%%%%%%%%%%%%%
+
+% Title page
+\title{标题}
+\author{作者}
+\date{日期}                         % 备选项: \today
+
+\begin{document}
+\maketitle                          % 在文章前加上标题作者日期
+\input{#1 abstract}
+\input{#2 introduction}
+\input{#3 related works}
+\input{#4 methods}
+\input{#5 experiments}
+\input{#6 conclusion}
+% \bibliographystyle{unsrt}         % 设置引用格式
+% \bibliography{references}         % 设置引用文件 bibtex
+\end{document}
