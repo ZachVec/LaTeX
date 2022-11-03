@@ -30,14 +30,6 @@
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "xelatex",
-            "tools": ["xelatex"]
-        },
-        {
-            "name": "pdflatex",
-            "tools": ["pdflatex"]
-        },
-        {
             "name": "pdf->bib->pdf->pdf",
             "tools": [
                 "pdflatex",
@@ -54,7 +46,15 @@
                 "xelatex",
                 "xelatex"
             ]
-        }
+        },
+        {
+            "name": "xelatex",
+            "tools": ["xelatex"]
+        },
+        {
+            "name": "pdflatex",
+            "tools": ["pdflatex"]
+        },
     ],
     "latex-workshop.latex.autoBuild.run": "never",
 }
