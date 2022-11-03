@@ -1,0 +1,43 @@
+\documentclass[10pt,UTF8]{beamer}
+\usetheme{zach}
+
+\usepackage[T1]{fontenc}          % avoid font warnings
+\usepackage[biblabel]{cite}       % manage references
+\usepackage{tikz}                 % Plotting package
+\usepackage{pgfplots}             % rather include jpg/pdf
+\usepackage{diagbox}              % diagbox for table
+\usepackage[export]{adjustbox}    % autofix for table
+\usepackage[linesnumbered, ruled]{algorithm2e}   % display pseudo code package
+\usepackage{listings}             % display code package
+\pgfplotsset{compat=1.9}
+\bibliographystyle{apalike}       % set reference styles
+\SetAlCapFnt{\tiny\sffamily}      % setting fonts for algorithm caption
+
+
+\title[Short Title]{Long Title Here}
+\author[Presenter Name]{\textbf{Presenter Name} \and Author2 \and Author3}
+\institute[Fudan University]{
+    School of Computer Science, Fudan University, Shanghai, China \\
+    Shanghai Key Laboratory of Data Science, Shanghai, China \\
+    Shanghai Institute of Intelligent Electronics \& Systems \\~\\
+    % Thanks funding here
+    \tiny{This work is partially supported by xxx}
+}
+
+% table of contents
+\AtBeginSection[]{
+    \begin{frame}{contents}
+    \tableofcontents[
+        currentsection,
+        currentsubsection, 
+        hideothersubsections, 
+        sectionstyle=show/shaded,
+    ]
+    \end{frame}
+}
+\begin{document}
+  \frame{\titlepage}
+  \include{src/section1.tex}
+  \include{src/section2.tex}
+  \include{src/section3.tex}
+\end{document}
